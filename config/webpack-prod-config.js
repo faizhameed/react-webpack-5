@@ -13,13 +13,10 @@ const paths = require("./paths");
 const common = require("./webpack-common-config.js");
 
 module.exports = merge(common, {
-  entry: {
-    vendor: ["react"],
-    app: paths.appIndexJs,
-  },
+  entry: [paths.appIndexJs],
   mode: "production",
   output: {
-    filename: "[chunkhash]_[name].js",
+    filename: "[name].bundle.js",
     path: paths.appBuild,
     publicPath: "/",
   },
