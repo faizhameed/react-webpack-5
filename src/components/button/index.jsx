@@ -1,9 +1,16 @@
-import React from 'react';
+import React from "react";
 
-const Button = () => (
-  <div>
-    <button type="button">Click Me!</button>
-  </div>
-);
+const Button = () => {
+  const notify = () => {
+    alert("thank you");
+  };
+  return (
+    <div>
+      <button type="button" onClick={notify}>
+        Click Me!
+      </button>
+    </div>
+  );
+};
 
 export default Button;
